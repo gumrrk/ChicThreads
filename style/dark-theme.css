@@ -48,12 +48,13 @@ header h1 {
     align-items: center;
     width: 20%;
     height: 100%;
-}
-
-.logoAndName img {
-    width: 20%;
-    padding-bottom: 5px;
-}
+  }
+  
+  .logoAndName img {
+  width: 20%;
+  padding-bottom: 5px;
+  margin-left: 40px;
+  }
 
 header button {
     border: none;
