@@ -8,3 +8,5 @@ Navigation bar - products in the shop window are filtered according to the click
 Search bar - products in the shop window are filtered according to the term typed in the search bar. For example, when "Black Hat" is typed, only products with "Black Hat" in the name are displayed in the shop window. When "Shirt" is typed, only products with "Shirt" in the name are displayed in the shop window.
 
 This source code can be used to create a functional and intelligent ecommerce website for ChicThreads, with a dynamic shop window and intuitive navigation for customers.
+
+You can access the website at: https://chicthreads.vercel.app/
