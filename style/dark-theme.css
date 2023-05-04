@@ -1,0 +1,494 @@
+* {
+    cursor: default;
+    transition: 0.2s linear;
+}
+
+body {
+    background-color: #201c1c;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    font-family: Inter, sans-serif;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: rgb(0, 0, 0) 0px 10px 10px -12px;
+    position: fixed;
+    background-color: #282424;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.header-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoAndName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+.logoAndName img {
+    width: 20%;
+    padding-bottom: 5px;
+}
+
+header button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 6px 0px 0px 0px;
+    text-align: left;
+    padding: 0;
+    font-size: 18px;
+    color: #f5f5f5;
+}
+
+header button:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    font-family: Inter, sans-serif;
+}
+
+.main-cards {
+    display: flex;
+    margin-top: 40px;
+    min-height: 50vh;
+    width: 75%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#ul-cards {
+    display: flex;
+    width: 100%;
+    height: 88vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* remove a largura da scrollbar */
+    -ms-overflow-style: none;
+    /* remove o estilo de scrollbar no Internet Explorer */
+}
+
+#ul-cards::-webkit-scrollbar {
+    width: 0px;
+    /* remove a scrollbar no Chrome, Safari e Edge */
+    height: 0px;
+}
+
+.main-details {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    width: 25%;
+}
+
+.main-search {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+}
+
+.search-input {
+    height: 35px;
+    width: 70%;
+    margin-right: 5px;
+    border: none;
+    background-color: #514c4c;
+    color: #f5f5f5;
+    padding-left: 10px;
+    cursor: text;
+}
+
+.search-input::placeholder {
+    color: #f5f5f5;
+}
+
+.search-button {
+    height: 35px;
+    width: 30%;
+    border: none;
+    background-color: #2e245e;
+    color: #f5f5f5;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cart-title {
+    background-color: #282424;
+    color: #f5f5f5;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-title h4 {
+    font-size: 1.2rem;
+}
+
+.cart-empty {
+    height: 260px;
+    width: 100%;
+    background-color: #514c4c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #f5f5f5;
+}
+
+.cart-empty h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cart-details {
+    height: 150px;
+    width: 100%;
+    background-color: #181414;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details-values {
+    width: 100%;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div-container {
+    background-color: #de1010;
+}
+
+.div-card {
+    width: 240px;
+    height: 300px;
+    border: 2px solid #121212;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.div-card:hover {
+    border: 2px solid #ffffff;
+}
+
+.div-card-top {
+    height: 120px;
+    background-color: #514c4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* para esconder a imagem que sai do card */
+}
+
+.div-card-top img {
+    object-fit: cover;
+    height: 120px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s ease-out;
+    /* para suavizar a transição */
+}
+
+.div-card-top img:hover {
+    transform: scale(1.4);
+    /* para fazer a imagem crescer em direção ao usuário */
+}
+
+.div-card-bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+.div-card-bottom small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    background-color: #f5f5f5;
+    color: #000000;
+    height: 18px;
+    width: 60px;
+    margin: 6px 0px
+}
+
+.div-card-bottom h2 {
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 18px;
+    height: 20px;
+    margin: 6px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.div-card-bottom p {
+    font-size: 12px;
+    font-weight: 100;
+    margin: 6px 0px;
+}
+
+.div-card-bottom h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 6px 0px;
+    color: #f5f5f5;
+}
+
+.div-card-bottom button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 130px;
+    margin: 6px 0px 0px 0px;
+    text-align: left;
+    padding: 0;
+    color: white;
+}
+
+.div-card-bottom button:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.div-cart {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    margin: 10px 5px 10px 5px;
+    object-fit: cover;
+}
+
+.div-cart-left {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    background-color: #514c4c;
+}
+
+.div-cart-left img {
+    height: 50px;
+}
+
+.div-cart-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 5px;
+}
+
+.div-cart-right h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.div-cart-right h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.div-cart-right button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    color: white;
+}
+
+.div-cart-right button:hover {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#cart-list {
+    height: 260px;
+    width: 100%;
+    background-color: #363333;
+    display: none;
+    flex-direction: column;
+    object-fit: cover;
+    overflow-y: auto;
+}
+
+.remove-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.end-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    padding: 0;
+}
+
+.end-button:nth-of-type(1):hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.end-button:nth-of-type(2):hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#brand {
+    cursor: pointer;
+}
+
+#dark-button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 50%;
+    margin: 0px 5px 0px 5px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: normal;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0;
+}
+
+#dark-button:hover {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444;
+}
+
+/* versão Inicial da responsividade */
+@media only screen and (max-width: 600px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-left: 10%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 40px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .main-cards {
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    .main-details {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .cart-title {
+        height: 80px;
+    }
+
+    .cart-empty {
+        height: 200px;
+    }
+
+    .div-card {
+        width: 90%;
+        height: auto;
+        margin: 10px 0px;
+    }
+
+    .div-card-top img {
+        height: auto;
+        width: 100%;
+        transition: none;
+    }
+}
