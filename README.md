@@ -1,12 +1,8 @@
 # ChicThreads
-This repository contains the source code for the ChicThreads ecommerce website, which is designed to be intelligent and user-friendly. Using the DOM, the website features specific functionalities as outlined below:
+Este repositório contém o código-fonte para o site de comércio eletrônico ChicThreads, que foi projetado para ser inteligente e amigável ao usuário. Usando o DOM, o site apresenta funcionalidades específicas, conforme descrito abaixo:
 
-Shop window - where product cards and all their information are displayed.
-Products - all product cards are dynamically created and assigned to the shop window using the DOM. The cards display the product title, photo, description, price, and a functional "Add to Cart" button.
-Shopping cart - customers can add and remove products from the cart via the DOM. The cart displays the total number of items and the total purchase value. When the cart is empty, the message "Cart is Empty" is rendered.
-Navigation bar - products in the shop window are filtered according to the clicked filter on the header, starting with "All" by default. For example, when the "Pants" filter is clicked, only products with the "Pants" tag are displayed in the shop window. When the "Shirts" filter is clicked, only products with the "Shirts" tag are displayed in the shop window.
-Search bar - products in the shop window are filtered according to the term typed in the search bar. For example, when "Black Hat" is typed, only products with "Black Hat" in the name are displayed in the shop window. When "Shirt" is typed, only products with "Shirt" in the name are displayed in the shop window.
-
-This source code can be used to create a functional and intelligent ecommerce website for ChicThreads, with a dynamic shop window and intuitive navigation for customers.
-
-You can access the website at: https://chicthreads.vercel.app/
+Janela de compra - onde os cartões de produto e todas as informações são exibidos.
+Produtos - todos os cartões de produto são criados dinamicamente e atribuídos à janela de compra usando o DOM. Os cartões exibem o título do produto, foto, descrição, preço e um botão "Adicionar ao carrinho" funcional.
+Carrinho de compras - os clientes podem adicionar e remover produtos do carrinho via DOM. O carrinho exibe o número total de itens e o valor total da compra. Quando o carrinho está vazio, a mensagem "O carrinho está vazio" é renderizada.
+Barra de navegação - os produtos na janela de compra são filtrados de acordo com o filtro clicado no cabeçalho, começando com "Todos" por padrão. Por exemplo, quando o filtro "Calças" é clicado, apenas os produtos com a tag "Calças" são exibidos na janela de compra. Quando o filtro "Camisas" é clicado, apenas os produtos com a tag "Camisas" são exibidos na janela de compra.
+Barra de pesquisa - os produtos na janela de compra são filtrados de acordo com o termo digitado na barra de pesquisa. Por exemplo, quando "Chapéu Preto" é digitado, apenas os produtos com "Chapéu Preto" no nome são exibidos na janela de compra. Quando "Camisa" é digitado, apenas os produtos com "Camisa" no nome são exibidos na janela de compra.
