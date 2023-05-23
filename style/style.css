@@ -100,14 +100,14 @@ main {
   justify-content: flex-start;
   overflow-y: auto;
   scrollbar-width: none;
-  /* remove a largura da scrollbar */
+ 
   -ms-overflow-style: none;
-  /* remove o estilo de scrollbar no Internet Explorer */
+ 
 }
 
 #ul-cards::-webkit-scrollbar {
   width: 0px;
-  /* remove a scrollbar no Chrome, Safari e Edge */
+ 
   height: 0px;
 }
 
@@ -226,7 +226,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* para esconder a imagem que sai do card */
+ 
 }
 
 .div-card-top img {
@@ -236,12 +236,12 @@ main {
   display: flex;
   flex-direction: row;
   transition: 0.3s ease-out;
-  /* para suavizar a transição */
+ 
 }
 
 .div-card-top img:hover {
   transform: scale(1.4);
-  /* para fazer a imagem crescer em direção ao usuário */
+ 
 }
 
 .div-card-bottom {
@@ -436,7 +436,7 @@ main {
   background: #bebebe;
 }
 
-/* versão Inicial da responsividade */
+
 @media only screen and (max-width: 600px) {
   header {
     height: auto;

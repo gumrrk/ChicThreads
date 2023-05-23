@@ -1,15 +1,12 @@
-// Declaração das variáveis globais (contadores)
 let cartCount = 0
 let cartValue = 0
 
-// Adicionando o evento de recarregar a página ao nome da Loja
 const reload = document.querySelector("#brand");
 reload.addEventListener("click", function () {
-    // Recarrega a página
+
     location.reload();
 });
 
-//Função que verifica se o carrinho está vazio, mostrando ou não a mensagem de carrinho vazio
 function checkCart() {
     const cartEmpty = document.querySelector("#cart-empty");
     const cartList = document.querySelector("#cart-list")
@@ -22,7 +19,6 @@ function checkCart() {
     }
 }
 
-// Função que limpa o Array
 function clearArray() {
     const lista = document.getElementById('ul-cards');
     while (lista.firstChild) {
@@ -30,7 +26,6 @@ function clearArray() {
     }
 }
 
-// Função para buscar no input de pesquisa
 function handleSearch() {
     const searchInput = document.querySelector('.search-input');
     const searchValue = searchInput.value.toLowerCase();
@@ -46,7 +41,6 @@ function handleSearch() {
     }
 }
 
-// Função para ativar a função handleSearch quando a tecla enter for apertada
 function createInput() {
     const searchInput = document.querySelector('.search-input');
     searchInput.addEventListener('keyup', (event) => {
@@ -54,12 +48,10 @@ function createInput() {
             handleSearch();
         }
     });
-
-    // Adicionando a função de pesquisa no input
+  
     const searchBtn = document.querySelector('.search-button');
     searchBtn.addEventListener('click', handleSearch);
 
-    // Adicionando efeito visual ao botão de pesquisa
     searchBtn.addEventListener('mousedown', () => {
         searchBtn.style.backgroundColor = '#37268C';
         searchBtn.style.border = '2px solid #2e245e';
@@ -70,7 +62,6 @@ function createInput() {
     });
 }
 
-// Função que cria os botões no Header de acordo com as tags existentes nos produtos
 function createHeaderButtons() {
     const ulHeader = document.querySelector(`#header-menu`);
     const tags = [];
@@ -89,8 +80,7 @@ function createHeaderButtons() {
                 button.classList.add('header-button')
                 ulHeader.appendChild(button);
             }
-
-            // Função que adiciona o filtro aos botões
+            
             const headerButtons = document.querySelectorAll('.header-button');
             headerButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -107,7 +97,6 @@ function createHeaderButtons() {
     }
 }
 
-// Função que busca o id de um elemento da lista
 function findProduct(id) {
     for (let i = 0; i < data.length; i++) {
         if (data[i].id == id) {
@@ -116,7 +105,6 @@ function findProduct(id) {
     }
 }
 
-// Função que gera os cards de todos os produtos, já adicionando evento aos botões de 'Adicionar ao carrinho'.
 function renderProductCards(array) {
     let listProducts = document.querySelector('#ul-cards')
     for (let i = 0; i < array.length; i++) {
@@ -147,8 +135,7 @@ function renderProductCards(array) {
         h3.innerHTML = `R$ ${element.value.toFixed(2)}`;
         button.innerHTML = `${element.addCart}`
         button.id = `p_${element.id}`
-
-        // Adicionando o evento de adicionar o item ao carrinho e somar no contador de itens
+       
         button.addEventListener('click', function (e) {
             let idElement = e.target.id;
             let id = +idElement.substring(2);
@@ -168,7 +155,7 @@ function renderProductCards(array) {
             checkCart()
         })
 
-        // Hierarquia do card da vitrine
+        
         div2.append(small, h2, p, h3, button)
         div1.appendChild(img)
         div.append(div1, div2)
@@ -177,7 +164,6 @@ function renderProductCards(array) {
     }
 }
 
-// Função que cria o card do carrinho
 function createCartCard(element) {
     let li = document.createElement('li');
     let div = document.createElement('div')
@@ -197,14 +183,12 @@ function createCartCard(element) {
     h3.innerHTML = `R$ ${element.value.toFixed(2)}`;
     button.innerHTML = `Remover produto`
     button.id = `r_${element.id}`
-
-    // Hierarquia do card do carrinho
+    
     div2.append(h2, h3, button)
     div1.appendChild(img)
     div.append(div1, div2)
     li.appendChild(div)
-
-    // Adicionando o evento de remover o item do carrinho e subtrair no contador de itens
+  
     button.addEventListener('click', function (event) {
         let listPath = event.composedPath();
         listPath[3].remove();
@@ -212,19 +196,17 @@ function createCartCard(element) {
         document.querySelector('#total-amount').innerHTML = `${cartCount}`;
         let price = +(h3.textContent.substring(3));
         cartValue -= price;
-        // Solução para um pequeno bug que mostrava "R$ -0.00" no valor total ao retirar todos os itens do carrinho individualmente
+
         if (Math.abs(cartValue) < 1e-10) {
             cartValue = 0;
         }
         document.querySelector('#total-price').innerHTML = `R$ ${cartValue.toFixed(2)}`
         checkCart()
     })
-
-    // Retornando a li dos itens do carrinho
+  
     return li;
 }
 
-// Criando a Função que limpa o carrinho e adicionando ao botão
 const removebutton = document.querySelector('#remove-cart-button');
 removebutton.addEventListener('click', function () {
     if (cartCount == 0) {
@@ -241,7 +223,6 @@ removebutton.addEventListener('click', function () {
     }
 })
 
-// Função para agradecer, limpar o carrinho e mostrar todos os itens na vitrine ao apertar o botão de finalizar a compra
 function checkout() {
     const buyButton = document.querySelector('#buy-button');
     buyButton.addEventListener('click', function () {
@@ -261,7 +242,6 @@ function checkout() {
     });
 }
 
-// Função de modo escuro
 function toggleTheme() {
     const themeStyle = document.getElementById("theme-style");
     if (themeStyle.getAttribute("href") === "./style/style.css") {
@@ -273,7 +253,6 @@ function toggleTheme() {
     }
 }
 
-// Chamada das funções "pai"
 checkout();
 createInput();
 createHeaderButtons();
